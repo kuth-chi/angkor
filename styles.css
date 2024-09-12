@@ -40,13 +40,16 @@ body {
 nav {
   display: flex;
   align-items: center;
+  max-width: 100%;
   justify-content: space-between;
   gap: 1rem;
+  background-color: rgba(2, 82, 89, 0.8);
 }
 
 .nav__logo img {
   max-width: 50px;
 }
+
 
 .nav__links {
   list-style: none;
@@ -63,7 +66,7 @@ nav {
 
 .search {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
@@ -94,11 +97,11 @@ nav {
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2px;
   font-weight: 600;
   color: var(--white);
   background-color: var(--primary-color);
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.3s;
 }
