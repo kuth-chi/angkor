@@ -1,55 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Travel Recommendation</title>
-        <link rel="stylesheet" href="./style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    </head>
-    <body>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand">TravelBloom</a>
-                <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn " style="background:var(--primary);" type="submit">Search</button>
-                <button class="btn btn-outline-success" type="reset">Clear</button>
-                </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./static/assets/logo.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>TravelBlom - Travel Recomendation | Final Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav__logo">
+          <img src="static/assets/logo.png" alt="logo" />
+        </div>
+        <ul class="nav__links">
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="#">Destinations</a></li>
+          <li class="link"><a href="#">Contact Us</a></li>
+          <li class="link"><a href="#">Blog</a></li>
+        </ul>
+        <div class="search">
+          <input type="text" placeholder="Search" />
+          <span><i class="ri-search-line"></i></span>
+        </div>
+        <div class="login">
+          <span><i class="ri-user-3-fill"></i></span>
+          Log In
+        </div>
+      </nav>
+      <div class="destination__container">
+        <img class="bg__img__1" src="./static/assets/bg-dots.png" alt="bg" />
+        <img class="bg__img__2" src="./static/assets/bg-arrow.png" alt="bg" />
+        <div class="socials">
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-youtube-fill"></i></span>
+        </div>
+        <div class="content">
+          <h1>EXPLORE<br />DREAM<br /><span>DESTINATION</span></h1>
+          <p>
+            It encourages exploration of unfamiliar territories, embracing
+            diverse cultures and landscapes, while pursuing the desired
+            destination that captivates the heart and ignites a sense of wonder.
+          </p>
+          <button class="btn">BOOK NOW</button>
+        </div>
+        <div class="destination__grid">
+          <div class="destination__card">
+            <img src="assets/destination-1.jpg" alt="destination" />
+            <div class="card__content">
+              <h4>10 Must-Visit Hidden Gems</h4>
+              <p>
+                Discover off-the-beaten-path locations and hidden gems within
+                dream destinations, taking you beyond the typical tourist spots.
+              </p>
+              <button class="btn">Read More</button>
             </div>
-        </nav>
-
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="destination__card">
+            <img src="assets/destination-2.jpg" alt="destination" />
+            <div class="card__content">
+              <h4>Immersive Cultural Experiences</h4>
+              <p>
+                Dive deep into the vibrant cultures of dream destinations,
+                showcasing the rituals, traditions, and local customs that make
+                these places truly unique.
+              </p>
+              <button class="btn">Read More</button>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5></h5>
-                  <p> </p>
-                </div>
-              </div>
+          </div>
+          <div class="destination__card">
+            <img src="assets/destination-3.jpg" alt="destination" />
+            <div class="card__content">
+              <h4>From Dreams to Reality</h4>
+              <p>
+                Explore expert tips, and hidden gems, ensuring every moment of
+                your trip is optimized, and make the most of time in your
+                long-awaited dream location.
+              </p>
+              <button class="btn">Read More</button>
             </div>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators"></div>
-                <div class="carousel-inner"></div>
-            
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-          </div>        
-
-        <script src="./travel_recommendation.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
