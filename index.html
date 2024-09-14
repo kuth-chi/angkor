@@ -3,96 +3,209 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./static/assets/logo.png">
+    <meta name="description" content="Top place for tourist in The world and Cambodia">
+    
+    <meta property="og:title" content="Travel Recommendation Top 5 in the world" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" id="ogUrl"/>
+    <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+        <link rel="icon" type="image/x-icon" href="./static/assets/logo.png">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>TravelBlom - Travel Recomendation | Final Project</title>
+    <title>TravelBloom - Travel Recommendation | Final Project</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const metaTag = document.getElementById('ogUrl');
+          if (metaTag) {
+              metaTag.setAttribute('content', window.location.href);
+          }
+      });
+  </script>
   </head>
   <body>
     <div class="container">
       <nav>
-        
-        <div class="nav__logo">
-        <img src="./static/assets/logo.png" alt="logo" />
-        <div class="nav__links">TravelBloom</div>
+        <div class="nav__brand">
+            <div class="nav__logo">
+            <img src="./static/assets/logo.png" alt="logo" />
+          </div>
+          <div class="nav__brand brand-item">TravelBloom</div>
         </div>
         
         <ul class="nav__links">
-          <li class="link"><a href="#">Home</a></li>
-          <li class="link"><a href="#">About us</a></li>
-          <li class="link"><a href="#">Contact Us</a></li>
+          <li class="link"><a href="/" onclick="showHome()">Home</a></li>
+          <li class="link"><a href="#" onclick="showAboutUs()">About Us</a></li>
+          <li class="link"><a href="#" onclick="showContactUs()">Contact Us</a></li>
         </ul>
-        <form class="search">
-          <input type="text" placeholder="Enter a destination or keyword ..." />
+        <form class="search" id="searchForm">
+          <input type="text" id="searchInput" placeholder="Enter a destination or keyword ..." />
           <span><i class="ri-search-line"></i></span>
           
-          <button type="submit" class="login" title="Search">
+          <button type="submit" id="searchBtn" class="login" title="Search">
             Search
           </button>
-          <button type="submit" class="login" title="Clear">
+          <button type="reset" class="login" title="Clear">
             Clear
           </button>
         </form>
+        <!-- Custom Modal for Search Results -->
+        <div id="searchModal" class="modal hidden">
+          <div class="modal-content">
+            <h3 class="h3">Found in result</h3>
+            <span class="close-btn" onclick="closeSearchModal()" id="closeSearchResultModal">&times;</span>
+              <hr class="my-2" />
+            <div id="modalResults" class="results-container">
+              <!-- Display search result here -->
+            </div>
+          </div>
+        </div>
       </nav>
       <div class="destination__container">
         <img class="bg__img__1" src="./static/assets/bg-dots.png" alt="bg" />
         <img class="bg__img__2" src="./static/assets/bg-arrow.png" alt="bg" />
         <div class="socials">
-          <span><i class="ri-twitter-fill"></i></span>
-          <span><i class="ri-facebook-fill"></i></span>
+          <span><a href="https://x.com/kuthchi/" noopener><i class="ri-twitter-fill"></i></a></span>
+          <span><a href="https://fb.me/kuthchi/" noopener><i class="ri-facebook-fill"></i></a></span>
           <span><i class="ri-instagram-line"></i></span>
           <span><i class="ri-youtube-fill"></i></span>
         </div>
         <div class="content">
-          <h1>EXPLORE<br />DREAM<br /><span>DESTINATION</span></h1>
-          <p>
-            It encourages exploration of unfamiliar territories, embracing
-            diverse cultures and landscapes, while pursuing the desired
-            destination that captivates the heart and ignites a sense of wonder.
-          </p>
-          <button class="btn">BOOK NOW</button>
+          <h1 id="headline"><span id="category"></span></h1><!-- Country/Temples/Beach-->
+          <p id="description"></p>
+          <p id="showTimeZone"></p>
+          <div id="bookBtn"></div>
         </div>
-        <div class="destination__grid">
-          <div class="destination__card">
-            <img src="assets/destination-1.jpg" alt="destination" />
-            <div class="card__content">
-              <h4>10 Must-Visit Hidden Gems</h4>
-              <p>
-                Discover off-the-beaten-path locations and hidden gems within
-                dream destinations, taking you beyond the typical tourist spots.
+        <!-- About us -->
+        <div id="aboutUsPopup" class="popup">
+          <div class="d-flex">
+            <button class="btn-close" onclick="closePopup('aboutUsPopup')" title="Click to close">Close</button>
+              <h1 class="h1">About Us</h1>
+              <div class="divider-y"></div>
+              <p class="text-white">Welcome to TravelBloom! We are a team passionate individuals dedicate to provide excellence services and products to our customer with the best experience for people traveling to different destinations around the world!
+                Our values include integrity. innovation, customer satisfaction, and teamwork in putting our customers first and working together to achieve our goals. Feel free to explore our website to learn more about that we offer!
               </p>
-              <button class="btn">Read More</button>
-            </div>
+              <div class="divider-y"></div>
+              <div class="bottom-0">
+                <div class="flex">
+                  <div class="display-3">
+                    Our Team
+                  </div>
+                  <div class="card">
+                    <div class="card-member bg-gray-30">
+                      <div class="flex flex-row ">
+                        <div class="avatar">
+                          <i class="ri-user-2-line"></i>
+                        </div>
+                        <div class="flex flex-column">
+                          <div class="team-name">
+                            Kuth Chi
+                          </div>
+                          <div class="member-description">
+                            Responsibility for Team and company as
+                          </div>
+                          <div class="member-title">
+                            CEO
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-member bg-gray-30">
+                      <div class="flex flex-row ">
+                        <div class="avatar">
+                          <i class="ri-user-2-line"></i>
+                        </div>
+                        <div class="flex flex-column">
+                          <div class="team-name">
+                            John Smith
+                          </div>
+                          <div class="member-description">
+                            Responsibility for Team and company as
+                          </div>
+                          <div class="member-title">
+                            Software Engineer
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-member bg-gray-30">
+                      <div class="flex flex-row ">
+                        <div class="avatar">
+                          <i class="ri-user-6-fill"></i>
+                        </div>
+                        <div class="flex flex-column">
+                          <div class="team-name">
+                            Sethika
+                          </div>
+                          <div class="member-description">
+                            Responsibility for Team and company as
+                          </div>
+                          <div class="member-title">
+                            UX Designer
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
-          <div class="destination__card">
-            <img src="assets/destination-2.jpg" alt="destination" />
-            <div class="card__content">
-              <h4>Immersive Cultural Experiences</h4>
-              <p>
-                Dive deep into the vibrant cultures of dream destinations,
-                showcasing the rituals, traditions, and local customs that make
-                these places truly unique.
-              </p>
-              <button class="btn">Read More</button>
-            </div>
-          </div>
-          <div class="destination__card">
-            <img src="assets/destination-3.jpg" alt="destination" />
-            <div class="card__content">
-              <h4>From Dreams to Reality</h4>
-              <p>
-                Explore expert tips, and hidden gems, ensuring every moment of
-                your trip is optimized, and make the most of time in your
-                long-awaited dream location.
-              </p>
-              <button class="btn">Read More</button>
-            </div>
+        </div>
+
+        <!-- Contact Us us -->
+        <div id="contactUsPopup" class="popup">
+          <div class="d-flex">
+              <div class="flex items-center space-between">
+                  <div class="text-center">
+                    <div class="display-3">
+                      Contact Us
+                    </div>
+                    <p class="text-white text-left text">Get in touch</p>
+                  </div>
+                  <div>
+                    <form action="#">
+                        <div class="form-row">
+                          <div class="input-data">
+                            <label for="firstNameInput" class="text-white">First Name</label>
+                            <br />
+                            <input type="text decoration-none" name="firstNameInput" id="firstNameInput" placeholder="First name" required>
+                          </div>
+                          <div class="input-data">
+                              <label class="text-white" for="lastNameInput">Last Name</label>
+                              <br />
+                              <input type="text decoration-none" name="lastNameInput" id="lastNameInput" placeholder="Last name" required>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="input-data">
+                            <label class="text-white" for="emailInput">Email Address</label>
+                            <br />
+                            <input name="emailInput" id="emailInput" type="text" placeholder="example@example.com" required>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                        <div class="input-data textarea decoration-none">
+                          <label class="text-white" for="messageInput">Message</label>
+                          <br />
+                          <textarea rows="8" cols="80" title="Text area" id="messageInput" name="messageInput" placeholder="Write your message her." required></textarea>
+                          <br />
+                          <div class="inner"></div>
+                          <button type="submit" class="submit-btn" value="submit" id="submitBtn" title="Submit"></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-close" onclick="closePopup('contactUsPopup')">Close</button>
           </div>
         </div>
       </div>
     </div>
+    <script src="./travel_recommendation.js"></script>
   </body>
 </html>

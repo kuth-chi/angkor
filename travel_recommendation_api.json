@@ -1,86 +1,104 @@
 {
     "countries": [
-    {
-    "id": 1,
-    "name": "Australia",
-    "cities": [
-    {
-    "name": "Sydney, Australia",
-    "imageUrl": ".images/enter_your_image_for_sydney.jpg",
-    "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
-    },
-    {
-    "name": "Melbourne, Australia",
-    "imageUrl": "./images/enter_your_image_for_melbourne.jpg",
-    "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
-    }
-    ]
-    },
-    {
-    "id": 2,
-    "name": "Japan",
-    "cities": [
-    {
-    "name": "Tokyo, Japan",
-    "imageUrl": "./images/tokyo.jpg",
-    "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
-    },
-    {
-    "name": "Kyoto, Japan",
-    "imageUrl": "./images/historical-kyoto.jpg",
-    "description": "Known for its historic temples, gardens, and traditional tea houses."
-    }
-    ]
-    },
-    {
-    "id": 3,
-    "name": "Brazil",
-    "cities": [
-    {
-    "name": "Rio de Janeiro, Brazil",
-    "imageUrl": "./images/brazil-rio.jpg",
-    "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
-    },
-    {
-    "name": "São Paulo, Brazil",
-    "imageUrl": "./images/São_Paulo_Brasil.jpg",
-    "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
-    }
-    ]
-    }
+        {
+            "id": 1,
+            "name": "Australia",
+            "cities": [
+                {
+                    "name": "Sydney, Australia",
+                    "imageUrl": "./static/img/enter_your_image_for_sydney.jpg",
+                    "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.",
+                    "timeZone": "Australia/Sydney"
+                },
+                {
+                    "name": "Melbourne, Australia",
+                    "imageUrl": "./static/img/enter_your_image_for_melbourne.jpg",
+                    "description": "A cultural hub famous for its art, food, and diverse neighborhoods.",
+                    "timeZone": "Australia/Melbourne"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Japan",
+            "cities": [
+                {
+                    "name": "Tokyo, Japan",
+                    "imageUrl": "./static/img/tokyo.jpg",
+                    "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture.",
+                    "timeZone": "Asia/Tokyo"
+                },
+                {
+                    "name": "Historical Tokyo, Japan",
+                    "imageUrl": "./static/img/historical-tokyo.jpg",
+                    "description": "Known for its historic temples, gardens, and traditional tea houses.",
+                    "timeZone": "Asia/Tokyo"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Brazil",
+            "cities": [
+                {
+                    "name": "Rio de Janeiro, Brazil",
+                    "imageUrl": "./static/img/brazil-rio.jpg",
+                    "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks.",
+                    "timeZone": "America/Sao_Paulo"
+                },
+                {
+                    "name": "São Paulo, Brazil",
+                    "imageUrl": "./static/img/São_Paulo_Brasil.jpeg",
+                    "description": "The financial hub with diverse culture, arts, and a vibrant nightlife.",
+                    "timeZone": "America/Sao_Paulo"
+                }
+            ]
+        }
     ],
     "temples": [
-    {
-    "id": 1,
-    "name": "Angkor Wat, Cambodia",
-    "imageUrl": "./images/Angkor-Wat-Cambodia.jpg",
-    "description": "A UNESCO World Heritage site and the largest religious monument in the world."
-    },
-    {
-    "id": 2,
-    "name": "Taj Mahal, India",
-    "imageUrl": "./images/taj-mahal_india.jpg",
-    "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
-    }
+        {
+            "id": 1,
+            "name": "Angkor Wat, Cambodia",
+            "imageUrl": "./static/img/Angkor-Wat-Cambodia.jpg",
+            "description": "A UNESCO World Heritage site and the largest religious monument in the world.",
+            "timeZone": "Asia/Phnom_Penh"
+        },
+        {
+            "id": 2,
+            "name": "Angkor Thom, Cambodia",
+            "imageUrl": "./static/img/Bayon-Temple.jpg",
+            "description": "A UNESCO World Heritage site and the largest religious monument in the world.",
+            "timeZone": "Asia/Phnom_Penh"
+        },
+        {
+            "id": 3,
+            "name": "Taj Mahal, India",
+            "imageUrl": "./static/img/taj-mahal_india.jpg",
+            "description": "An iconic symbol of love and a masterpiece of Mughal architecture.",
+            "timeZone": "Asia/Kolkata"
+        }
     ],
     "beaches": [
-    {
-    "id": 1,
-    "name": "Bora Bora, French Polynesia",
-    "imageUrl": "./images/French-Polynesia.jpg",
-    "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
-    },
-    {
-    "id": 2,
-    "name": "Copacabana Beach, Brazil",
-    "imageUrl": "./images/copacabana-beach-brazil.jpg",
-    "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
-    },
-    {
-        "id": 2,
-        "name": "Bayon Temple, Cambodia",
-        "imageUrl": "./images/Bayon-Temple.jpg",
-        "description": "Built in the late 12th or early 13th century as the state temple of the King Jayavarman VII, the Bayon stands at the centre of Jayavarman's capital, Angkor Thom."
+        {
+            "id": 1,
+            "name": "Bora Bora, French Polynesia",
+            "imageUrl": "./static/img/French-Polynesia.jpg",
+            "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows.",
+            "timeZone": "Pacific/Tahiti"
+        },
+        {
+            "id": 2,
+            "name": "Copacabana Beach, Brazil",
+            "imageUrl": "./static/img/copacabana-beach-brazil.jpg",
+            "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views.",
+            "timeZone": "America/Sao_Paulo"
+        },
+        {
+            "id": 3,
+            "name": "Sihanoukville, Cambodia",
+            "imageUrl": "./static/img/sihanouk.jpg",
+            "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views.",
+            "timeZone": "Asia/Phnom_Penh"
         }
     ]
-    }
+}
